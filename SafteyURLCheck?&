@@ -1,0 +1,24 @@
+%%[if empty(@answerurl) then
+      
+      set @answerurl ="https://aarp.gospringboard.com/secure/we-appreciate-your-time?i=set&"
+     
+     endif
+      set @answerurl1 = @answerurl
+    Set @last = Substring(@answerurl, Length(@answerurl), 1)
+    
+    if @last=="&" or @last=="?" then
+      set @answerurl=@answerurl
+     elseif indexOf(@answerurl, "?") > 0 then
+      set @answerurl=Concat(@answerurl,"&")
+     else then
+      set @answerurl=Concat(@answerurl,"?")
+     endif 
+      
+      
+      set @fullanswerurl=concat(@answerurl,'cmp=','works')
+       
+  ]%%
+%%=v(@answerurl1)=%%<br><br>
+  %%=v(@last)=%%<br><br>
+%%=v(@answerurl)=%%<br><br>
+%%=v(@fullanswerurl)=%%<br><br>
