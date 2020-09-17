@@ -1,0 +1,10 @@
+Hide AMPscript in Content Builder or Cloud Pages editor
+When you're not doing send previews, big AMPscript code blocks can make your email un-readable. You can easily hide a block using the following :
+
+
+
+%%[
+/* My ampscript comment that describes the block <div style="display:none"> */
+here goes the code
+/*</div>*/ 
+]%%
